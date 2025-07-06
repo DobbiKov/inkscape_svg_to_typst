@@ -263,6 +263,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     process_svg(input_file)
-    print("\nAll done! You can now use `#import` in your Typst document.")
+    print(f"\nAll done! The {input_file} has been processed successfully!")
 
 
