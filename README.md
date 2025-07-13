@@ -29,6 +29,7 @@ How to use such figures:
 ```
 
 ## Dependencies
+- `python`
 - lxml: For robust SVG parsing and manipulation.
 - numpy: For accurate handling of SVG transformation matrices.
 
