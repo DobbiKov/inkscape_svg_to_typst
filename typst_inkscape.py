@@ -126,7 +126,7 @@ def process_svg(input_path):
         root = tree.getroot()
     except Exception as e:
         print(f"Error: Could not parse SVG file '{input_path}'.\n{e}")
-        sys.exit(1)
+        raise e
 
     # Extract Dimensions
     try:
