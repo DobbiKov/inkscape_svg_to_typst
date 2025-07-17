@@ -11,7 +11,7 @@ It takes one argument: the path to an Inkscape SVG file.
 e.g., python typst_inkscape.py my_diagram.svg
 
 It produces two files:
-1.  my_diagram_clean.svg: The original graphics with all text removed.
+1.  my_diagram_dobb_clean.svg: The original graphics with all text removed.
 2.  my_diagram.typ: A Typst script that overlays the text, typeset by
     Typst, onto the cleaned SVG.
 
@@ -198,7 +198,7 @@ def process_svg(input_path):
         node.getparent().remove(node)
         
     base, _ = os.path.splitext(input_path)
-    clean_svg_path = f"{base}_clean.svg"
+    clean_svg_path = f"{base}_dobb_clean.svg"
     # The lxml tree object handles writing perfectly.
     tree.write(clean_svg_path, pretty_print=True, xml_declaration=True, encoding='UTF-8')
     print(f"Successfully created clean SVG: '{clean_svg_path}'")
